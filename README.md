@@ -60,3 +60,29 @@ Si deseas contribuir o sugerir mejoras:
 3. Envía un pull request con la descripción de tus cambios.
 
 ¡Gracias por explorar estos proyectos conmigo!
+
+| ℹ️ Nota Informativa |
+|--------------------|
+| Los proyectos que utilicen una Raspberry Pi 5 emplean la librería **GPIOD** debido a la incompatibilidad con la librería `RPi.GPIO`. Es fundamental instalar y configurar GPIOD correctamente para garantizar el funcionamiento adecuado de los GPIO. |
+
+### Instalación de librería.
+    ```bash
+    # Actualizar el sistema
+    sudo apt update && sudo apt upgrade -y
+
+    # Instalar las herramientas necesarias
+    sudo apt install -y gpiod libgpiod-dev python3-libgpiod
+
+    # Verificar instalación
+    gpiodetect
+
+    echo "La librería GPIOD ha sido instalada correctamente. Usa el comando 'gpiodetect' para verificar los chips GPIO disponibles."
+    ```
+
+### Validar información de puertos
+
+La validación de puertos es importante debido a que necesitas la información de los gpiochip para poder codificar bajo tu hardware. Copia y pega el siguiente código en tu consola:
+
+    ```bash
+    gpioinfo
+    ```
