@@ -2,10 +2,10 @@ import gpiod
 import time
 
 # Definir el nombre del chip GPIO
-CHIP_NAME = "/dev/gpiochip4"
+CHIP_NAME = "/dev/gpiochip0"
 
 # Número de línea GPIO que queremos controlar (17)
-LINE_NUMBER = 27
+LINE_NUMBER = 17
 
 def main():
     # Crear un objeto de chip GPIO
@@ -23,7 +23,7 @@ def main():
         print(f"GPIO {LINE_NUMBER} activado durante 3 segundos.")
         
         # Esperar 3 segundos
-        time.sleep(3)
+        time.sleep(15)
         
         # Desactivar la línea GPIO (valor 0)
         line.set_value(0)
