@@ -2,7 +2,7 @@ import gpiod
 import time
 
 # Definir el nombre del chip GPIO
-CHIP_NAME = "/dev/gpiochip0"
+CHIP_NAME = "/dev/gpiochip4"
 
 # Número de línea GPIO que queremos controlar (17)
 LINE_NUMBER = 27
