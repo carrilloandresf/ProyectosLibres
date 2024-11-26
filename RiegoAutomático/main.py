@@ -5,7 +5,7 @@ import time
 CHIP_NAME = "/dev/gpiochip0"
 
 # Número de línea GPIO que queremos controlar (17)
-LINE_NUMBER = 17
+LINE_NUMBER = 27
 
 def main():
     # Crear un objeto de chip GPIO
