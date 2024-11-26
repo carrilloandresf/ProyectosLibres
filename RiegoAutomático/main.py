@@ -23,7 +23,7 @@ def main():
         print(f"GPIO {LINE_NUMBER} activado durante 3 segundos.")
         
         # Esperar 3 segundos
-        time.sleep(15)
+        time.sleep(3)
         
         # Desactivar la línea GPIO (valor 0)
         line.set_value(0)
