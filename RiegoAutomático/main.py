@@ -14,13 +14,9 @@ def main():
     # Solicitar la línea GPIO
     line = chip.get_line(LINE_NUMBER)
     
-    # Configurar la línea como salida
-    config = gpiod.LineRequest()
-    config.consumer = "riegoAutomatico"
-    config.request_type = gpiod.LINE_REQ_DIR_OUT
-    
-    line.request(config)
-    
+    # Configurar como salida
+    line.request(consumer="riegoAutomatico", type=gpiod.LINE_REQ_DIR_OUT)
+
     try:
         # Activar la línea GPIO (valor 1)
         line.set_value(1)
